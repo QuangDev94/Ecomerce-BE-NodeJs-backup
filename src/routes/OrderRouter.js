@@ -17,11 +17,7 @@ router.get(
 
 router.get("/get-order-all", authMiddleWare, orderController.getOrderAll);
 
-router.get(
-  "/get-my-order-details/:id",
-  authUserMiddleWare,
-  orderController.getMyOrderDetails,
-);
+router.get("/get-my-order-details/:id", orderController.getMyOrderDetails);
 
 router.post(
   "/cancel-order/:id",
